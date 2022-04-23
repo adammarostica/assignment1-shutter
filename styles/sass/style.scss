@@ -432,19 +432,7 @@ PHONE MEDIA
       align-items: center;
     }
   }
-  
-  
-  .readMoreBar {
-    flex-direction: row;
-    img {
-      min-height: 100%;
-      width: 100%;
-    }
-    &:nth-of-type(1) {
-      flex-direction: row-reverse;
-    }
-  }
-  
+
   footer {
     .wrapper {
       width: 85%;
@@ -501,9 +489,8 @@ TABLET MEDIA
   
   .menu {
     flex-direction: row;
-    justify-content: flex-end;
     position: static;
-    width: 150px;
+    width: 100%;
     margin: 0;
     text-align: initial;
     transition: transform .3s ease-in;
@@ -584,6 +571,36 @@ TABLET MEDIA
     }
   }
 
+  .readMoreBar {
+    flex-direction: row;
+    img {
+      object-fit: cover;
+      height: 100%;
+    }
+    &:nth-of-type(1) {
+      flex-direction: row-reverse;
+      text-align: right;
+    }
+    &:nth-of-type(2) {
+      text-align: left;
+    }
+  }
+  
+  .readMoreText {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    .wrapper {
+      width: 60%;
+      margin: 0 5vw 0 auto;
+    }
+  }
+
+  .candidPhotography {
+    .wrapper {
+      margin: 0 auto 0 5vw;
+    }
+  }
 }
 
 /*=====
