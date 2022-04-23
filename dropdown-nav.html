@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>CSS Dropdown Navigation</title>
+	<style>
+		/* Colours:
+		Dark blue: #221c38
+		Light blue: #96a1be */
+
+		/* Base font style */
+		nav {
+			font-family: Arial, sans-serif;
+		}
+
+		.main-menu {
+			margin: 0;
+			padding: 0;
+			background: #221c38;
+			display: flex;
+		}
+		
+		.main-menu li {
+			list-style: none;
+			position: relative;
+		}
+
+		.main-menu li:hover .sub-menu,
+		.main-menu li:focus-within .sub-menu {
+			height: fit-content;
+			overflow: auto;
+		}
+
+		.main-menu li:focus .sub-menu {
+			height: fit-content;
+			overflow: auto;
+		}
+		
+				.main-menu a {
+					margin: 0;
+					color: #eee;
+					padding: 10px 20px;
+					display: block;
+					text-decoration: none;
+				}
+		
+		.sub-menu {
+			position: absolute;
+			padding: 0;
+			background: #96a1be;
+			height: 0;
+			overflow: hidden;
+		}
+
+		.sub-menu a {
+			color: #111;
+			padding: 10px 20px;
+		}
+	</style>
+</head>
+<body>
+
+<header>
+	<nav>
+		<ul class="main-menu">
+			<li><a href="home.html">Home</a></li>
+			<li><a href="about.html">About <span>&#x25BC;</span></a>
+				<ul class="sub-menu">
+					<li><a href="#">One</a></li>
+					<li><a href="#">Two</a></li>
+					<li><a href="#">Three</a></li>
+					<li><a href="work.html">Work</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+			</li>
+			<li><a href="work.html">Work <span>&#x25BC;</span></a>
+				<ul class="sub-menu">
+					<li><a href="work.html">Work</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+			</li>
+			<li><a href="contact.html">Contact</a></li>
+		</ul>
+	</nav>
+</header>
+</body>
+</html>
